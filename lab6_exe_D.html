@@ -70,12 +70,12 @@ Description : API Usage.
                 coursesList.innerHTML = ''; 
                 data.forEach(course => {
                     const li = document.createElement('li');
-                    li.textContent = course.name;
+                    li.textContent = `${course.name} (Unit: ${course.unit})`;
                     coursesList.appendChild(li);
                 });
             })
         }
-        
+
         // Fetch students on window load
         window.onload = fetchStudents;
     </script>
